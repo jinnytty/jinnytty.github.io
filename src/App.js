@@ -16,7 +16,7 @@ import './App.css';
 function App() {
   const CLIENTID = 'n0dkyk9hwq7lzc7knflzssp6v9fsbv';
   const source = new ReplayServerSource({
-    baseUrl: 'http://88.198.134.191',
+    baseUrl: 'https://comments.vodfrogs.com',
     vodid: '793678447',
   });
   const bridge = new ReactPlayerBridge(source);
