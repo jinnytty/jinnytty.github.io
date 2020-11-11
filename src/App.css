@@ -1,0 +1,21 @@
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#player {
+  height: 100%;
+  flex: 1;
+}
+
+#player iframe {
+  display: block;
+}
+
+#chat {
+  flex: 0 0 300px;
+  height: 100%;
+  font-size: 0.8em;
+}
