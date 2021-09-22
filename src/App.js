@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import { ReChat } from '@rechat/component';
 import { TwitchRenderer } from '@rechat/twitch-render';
-import { ReplayServerSource } from '@rechat/replay-server-source';
+import { TwitchVod } from '@rechat/twitch-vod';
 import { ReactPlayerBridge } from '@rechat/react-player-bridge';
 import { BetterTTV } from '@rechat/betterttv';
 import { FrankerFacez } from '@rechat/frankerfacez';
@@ -15,9 +15,9 @@ import './App.css';
 
 function App() {
   const CLIENTID = 'n0dkyk9hwq7lzc7knflzssp6v9fsbv';
-  const source = new ReplayServerSource({
-    baseUrl: 'https://comments.vodfrogs.com',
-    vodid: '793678447',
+  const source = new TwitchVod({
+    clientId: CLIENTID,
+    vodid: '1155849029',
   });
   const bridge = new ReactPlayerBridge(source);
 
@@ -41,7 +41,7 @@ function App() {
       <div id="player">
         <ReactPlayer
           ref={playerRef}
-          url="https://www.youtube.com/watch?v=EikBRnA9h2c"
+          url="https://api.pogu.live/https://d2nvs31859zcd8.cloudfront.net/4475570031b5be958ef9_jinnytty_39998838683_1632302793/chunked/index-dvr.m3u8"
           controls="true"
           width="100%"
           height="100%"
